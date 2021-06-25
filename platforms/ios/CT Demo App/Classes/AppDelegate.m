@@ -27,11 +27,14 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import <CleverTap-iOS-SDK/CleverTap.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
+    [CleverTap autoIntegrate];
+    [CleverTap setDebugLevel:3];
     self.viewController = [[MainViewController alloc] init];
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }

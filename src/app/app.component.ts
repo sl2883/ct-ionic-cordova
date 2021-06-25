@@ -22,6 +22,8 @@ export class AppComponent implements OnInit, AfterViewInit {
       statusBar.styleDefault();
       splashScreen.hide();
 
+      clevertap.registerPush()
+
       const options: PushOptions = {
         ios: {
             alert: 'true',
